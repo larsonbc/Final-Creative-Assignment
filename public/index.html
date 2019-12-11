@@ -4,8 +4,33 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <title>Midterm 2</title>
+  <title>Final Creative Assignment</title>
 </head>
+
+<style>
+body {
+        background-image: url("https://images.unsplash.com/photo-1494200483035-db7bc6aa5739?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 1300px 850px;
+    }
+    
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+
+.header {
+  max-width: 500px;
+  margin: auto;
+}
+
+</style>
 
 <body>
   <div class="header">
@@ -13,45 +38,34 @@
       <img src="images/ordinary.png">
     </div>-->
     <div class="title">
-      <h1>Shopping Interface</h1>
+      <h1>Welcome to the Giraffe Music Library App</h1>
+      <p>Use this web app to manage your music library. You can use this main page to browse available music and add it to your library. To make more music availabe, click on the "DJ" link below. </p>
       <p></p>
-      <h1>Current Products</h1>
+      <h1>Available Music</h1>
     </div>
   </div>
-  <!--<div id="app" class="content">                                From original
-    <section class="image-gallery">
-      <div class="image" v-for="item in items">
-        <h2>{{item.title}} - {{item.descript}}</h2>
-        <img :src="item.path" />
-      </div>
-  </div>-->
-
-  <!--<div v-for="candidate in candidates">                                                  Template from voting
-            <input type="checkbox" v-model="candidate.selected"> {{candidate.Name}}
-        </div>
-        <button v-on:click="dovote()"> Submit Votes </button>
-
-        <h1>Submitted Ballot</h1>
-        <div v-for="candidate in ballot">
-            {{candidate.Name}}
-        </div>
-    </div>
-    </div>-->
+  
   <div id="app" class="content">
     <div v-for="item in items">
       <input type="checkbox" v-model="item.selected"> {{item.title}} - {{item.descript}}
       <img :src="item.path" />
     </div>
-    <button v-on:click="submitpurchase()"> Submit Purchase </button>
-
-    <h1>Shopping Cart</h1>
+    <hr>
+    <br>
+    <br>
+    <button v-on:click="submitpurchase()"> Add Music To Library </button>
+    
+    <br>
+    <br>
+    <br>
+    <h1>Music Library</h1>
     <div v-for="item in shoppingcart">
       {{item.title}} - {{item.descript}} <img :src="item.path" />
     </div>
   </div>
   </div>
   <div class="footer">
-    <a href="admin.html">Admin</a>
+    <a href="admin.html">DJ</a>
     </div>
 
     <hr>
