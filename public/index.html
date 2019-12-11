@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Midterm 2</title>
+</head>
+
+<body>
+  <div class="header">
+    <!--<div class="logo">
+      <img src="images/ordinary.png">
+    </div>-->
+    <div class="title">
+      <h1>Shopping Interface</h1>
+      <p></p>
+      <h1>Current Products</h1>
+    </div>
+  </div>
+  <!--<div id="app" class="content">                                From original
+    <section class="image-gallery">
+      <div class="image" v-for="item in items">
+        <h2>{{item.title}} - {{item.descript}}</h2>
+        <img :src="item.path" />
+      </div>
+  </div>-->
+
+  <!--<div v-for="candidate in candidates">                                                  Template from voting
+            <input type="checkbox" v-model="candidate.selected"> {{candidate.Name}}
+        </div>
+        <button v-on:click="dovote()"> Submit Votes </button>
+
+        <h1>Submitted Ballot</h1>
+        <div v-for="candidate in ballot">
+            {{candidate.Name}}
+        </div>
+    </div>
+    </div>-->
+  <div id="app" class="content">
+    <div v-for="item in items">
+      <input type="checkbox" v-model="item.selected"> {{item.title}} - {{item.descript}}
+      <img :src="item.path" />
+    </div>
+    <button v-on:click="submitpurchase()"> Submit Purchase </button>
+
+    <h1>Shopping Cart</h1>
+    <div v-for="item in shoppingcart">
+      {{item.title}} - {{item.descript}} <img :src="item.path" />
+    </div>
+  </div>
+  </div>
+  <div class="footer">
+    <a href="admin.html">Admin</a>
+    </div>
+
+    <hr>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
